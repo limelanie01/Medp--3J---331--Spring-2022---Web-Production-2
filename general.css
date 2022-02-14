@@ -1,0 +1,46 @@
+/*comment*/
+body{
+    margin: 0;
+    padding: 20px;
+    color: #384652;
+    font-family: Tahoma, Georgia, Verdana, Times, serif;
+    font-size: 13pt;
+}
+
+.header{
+    border-style: solid;
+    border-width: 5px;
+    font-size: 15pt;
+    background-color: #97d7db;
+    color: #1a334a;
+    padding: 3px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.extrapadding{
+    border-right-style: dotted;    /*temporary border*/
+    border-left-style: dotted;
+    border-bottom-style: dotted;
+    border-width: 5px;
+    color: #1a334a;
+    border-radius: 0px 0px 15px 15px;    /*temporary border*/
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+p.right{
+    padding: 10px;
+    text-align: left;
+}
+
+img.side{
+    display: block;
+    border-radius: 20px;
+    padding: 10px;
+    float: left;
+}
+
+.timejs{
+    color: orange;
+}
