@@ -2,6 +2,10 @@
 body{
     margin: 0;
     padding: 20px;
+    background-image: url("images/bgimaget.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #384652;
     font-family: Tahoma, Georgia, Verdana, Times, serif;
     font-size: 13pt;
@@ -17,16 +21,29 @@ body{
     text-align: center;
     border-radius: 15px 15px 0px 0px;
 }
+footer{
+    text-align: center;
+    padding: 3px;
+    font-size: 15pt;
+    background-color: #97d7db;
+    color: #1a334a;
+    border-radius: 0px 0px 15px 15px;
+}
+
+@media only screen and (max-width: 600px){		/*when the width of the doc is 600px or less*/
+    img.side{
+		width: 100%;
+		height: auto;
+	}
+}
 
 .extrapadding{
-    border-right-style: dotted;    /*temporary border*/
-    border-left-style: dotted;
-    border-bottom-style: dotted;
-    border-width: 5px;
-    color: #1a334a;
-    border-radius: 0px 0px 15px 15px;    /*temporary border*/
     padding: 20px;
     background-color: #f9f9f9;
+}
+
+.righttext{
+    text-align: right;
 }
 
 p.right{
@@ -42,5 +59,224 @@ img.side{
 }
 
 .timejs{
-    color: orange;
+    color: #96884a;
+}
+
+/*~~~~~~~~~~NAVIGATION BAR~~~~~~~~~~*/
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #a9c7c6;
+    width: 100%;
+}
+  
+li.navbar {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+  
+li.navbar a, .dropbtn {
+    display: inline-block;
+    color: #666;
+    text-align: center;
+    padding: 15px 32.5px;
+    text-decoration: none;
+    max-width: 100%;
+}
+  
+li.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+}
+  
+li.navbar .dropdown {
+    display: inline-block;
+    width: 33.33%;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f3f3f3;
+    color: #666;
+    width: 30%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: #666;
+    padding: 15px 32.5px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+  
+.dropdown-content a:hover {background-color: #ddd;}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*~~~~~~~~~~CSS FOR Buttons Style (Art Gallery)~~~~~~~~~~*/
+.plain{
+    text-decoration: none;
+    color: #555;
+  }
+  
+  .artbtn{
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #d3c685;
+    cursor: pointer;
+    border-radius: 12px 12px 0px 0px;
+    font-size: 16px;
+  }
+  
+  .artbtn:hover{
+    background-color: #ddd;
+  }
+  
+
+/*~~~~~~~~~~ART GALLERY: WIP + COMPLETED~~~~~~~~~~*/
+.artcorner{
+    border-radius: 0px 20px 20px 20px;
+    padding: 30px;
+    background-color: #d3c685;
+}
+  
+img.artgallery {
+    vertical-align: middle;
+}
+  
+/* Position the image container (needed to position the left and right arrows) */
+.artcontainer {
+    position: relative;
+}
+  
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    text-align: center;
+}
+  
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+  
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 3px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #666;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+}
+  
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #96884a;
+    padding: 2px 16px;
+    color: white;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Six columns side by side */
+.column {
+    float: left;
+    width: auto;
+    padding: 5px;
+}
+  
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+  
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+
+/*~~~~~~~~~~SOCIAL MEDIA BUTTONS~~~~~~~~~~*/
+.fa{
+  padding: 10px;
+  font-size: 30px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+}
+.fab{
+  padding: 10px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.fa:hover, .fab:hover {
+    opacity: 0.7;
+}
+
+.fa-envelope {
+  background: #c43737;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #f24475;
+  color: white;
+}
+
+.fa-tiktok {
+  background: #262424;
+  color: white;
 }
