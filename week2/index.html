@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HW 2- Poem Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="utilities.js"></script>
+</head>
+
+<body>
+  Homework 2- Poem<br><br>
+  <div class="container">
+    <div id="poem">
+      <script src="script.js"></script>
+    </div>
+    <br>
+
+    <button class="btn" onclick="changeStyle()">Size Up</button>
+    <script>
+      function changeStyle(){
+          var element = document.getElementById("poem");
+          element.style.fontSize = "25px";
+      }
+    </script>
+      
+    <button class="btn">
+        <a href="index.html" class="plain">Refresh</a>
+    </button>
+    
+    
+  </div>
+</body>
+</html>

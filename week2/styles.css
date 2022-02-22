@@ -1,0 +1,31 @@
+/*Inspo:
+https://www.tutorialkart.com/javascript/how-to-change-font-size-of-div-in-javascript/*/
+
+body {
+  
+  font-family: Tahoma, Georgia, Verdana, Times, serif;
+  margin: 0;
+  padding: 20px;
+  color: #384652;
+  font-size: 13pt;
+}
+
+.btn{
+  padding: 10px 5px;
+  background-color: #f8ebcf;
+  border-radius: 5px 5px 5px 5px;
+  border: none;
+  cursor: pointer;
+  color: #726240;
+}
+
+.plain{
+  text-decoration: none;
+  color: #726240;
+}
+
+.container{
+  padding: 12px 16px;
+  background-color: #eed49c;
+  border-radius: 12px 12px 12px 12px;
+}
