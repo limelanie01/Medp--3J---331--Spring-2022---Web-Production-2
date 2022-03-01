@@ -1,5 +1,6 @@
 /*Inspo:
 https://www.tutorialkart.com/javascript/how-to-change-font-size-of-div-in-javascript/
+https://learn.shayhowe.com/advanced-html-css/css-transforms/
 https://learn.shayhowe.com/advanced-html-css/transitions-animations/
 */
 
@@ -9,7 +10,15 @@ body {
   padding: 20px;
   color: #384652;
   font-size: 13pt;
+  background-color: #ec8686;
+  transition-property: background;
+  transition-duration: 1s;
+  transition-timing-function: linear;
 }
+body:hover{
+  background: #f1c36bf1;
+}
+
 h1 {
   text-align: center;
 }
@@ -23,14 +32,7 @@ h1 {
   padding: 12px 16px;
   background-color: #eed49c;
   border-radius: 12px;
-  transition-property: background;
-  transition-duration: 1s;
-  transition-timing-function: linear;
 }
-.container:hover{
-  background: #8ee66ca8;
-}
-
 canvas {
   display: block;
   float: right;

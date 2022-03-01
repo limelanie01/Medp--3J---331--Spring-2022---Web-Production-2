@@ -1,5 +1,5 @@
 function setup() {
-    createCanvas(800, 400);
+    createCanvas(900, 400);
 }
  // If we put it all in the setup loop, it only draws once
  //PIE BASE
