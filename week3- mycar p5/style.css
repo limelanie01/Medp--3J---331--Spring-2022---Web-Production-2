@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+
+.scale-transition {
+  transition: transform 250ms;
+}
+
+.scale-transition:hover {
+  transform: scale(2)
+}
