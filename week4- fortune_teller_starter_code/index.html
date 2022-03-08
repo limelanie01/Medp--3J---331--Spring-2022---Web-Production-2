@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Fortune Teller </title>
+
+    <script src="utility.js"></script>
+  </head>
+
+  <body>
+    <main id="body">
+      <h1 id="title"> 🥠 Fortune Teller </h1>
+    <section>
+      <div id="object">blah blah</div>
+      The time is: <span id='time'>00:00:00</span><br>
+
+      <img id='obj' src='../images/2021-10-21gorou.png'>
+
+      <script>
+        O('title').innerHTML = "<b> 🥠 What is your <span id='colorchange'>Fortune</span>? 🥠 </b>"
+        S('colorchange').color = 'orange'
+        S('body').textAlign = 'center'
+        S('body').fontFamily = ' Tahoma, Georgia, Verdana, Times, serif'
+
+        S('object').border = 'solid 1px red'
+        S('object').width = '100px'
+        S('object').height = '100px'
+        S('object').background = '#eee'
+        S('object').color = 'blue'
+        S('object').fontSize = '15pt'
+        S('object').fontStyle = 'italic'
+
+        handle = setInterval("showtime(O('time'))", 1000)
+        
+        function showtime(objectT)
+        {
+          var date = new Date()
+          objectT.innerHTML = date.toTimeString().substr(0,8)
+        }
+        setTimeout("clearInterval(handle)", 10000)
+
+
+        O('obj').onmouseover= function() {
+          this.src='../images/2021-08-20chongyunt.png'
+        }
+        O('obj').onmouseout= function() {
+          this.src='../images/2021-10-21gorou.png'
+        }
+      </script>
+        
+
+      <p> Pick a number:  <input type="number" id="pickNumber" value="0" max="5"></p>
+      <p> Enter your name: <input type="text" id="userName"></p>
+      <p><button onclick="getFortune()"> Get My Fortune!</button></p>
+      <p id="fortune"></p>
+    </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
