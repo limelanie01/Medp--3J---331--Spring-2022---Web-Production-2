@@ -6,55 +6,39 @@
     <script src="utility.js"></script>
   </head>
 
-  <body>
-    <main id="body">
-      <h1 id="title"> 🥠 Fortune Teller </h1>
-    <section>
-      <div id="object">blah blah</div>
-      The time is: <span id='time'>00:00:00</span><br>
-
-      <img id='obj' src='../images/2021-10-21gorou.png'>
+  <body id="body">
+    <h1 id="title"> 🥠 Fortune Teller </h1>
+    <section id="container">
 
       <script>
-        O('title').innerHTML = "<b> 🥠 What is your <span id='colorchange'>Fortune</span>? 🥠 </b>"
-        S('colorchange').color = 'orange'
+        S('body').backgroundImage = "url('fortunecookie.jpg')"
+        S('body').backgroundPosition = 'center'
         S('body').textAlign = 'center'
         S('body').fontFamily = ' Tahoma, Georgia, Verdana, Times, serif'
 
-        S('object').border = 'solid 1px red'
-        S('object').width = '100px'
-        S('object').height = '100px'
-        S('object').background = '#eee'
-        S('object').color = 'blue'
-        S('object').fontSize = '15pt'
-        S('object').fontStyle = 'italic'
+        O('title').innerHTML = "<b> 🥠 What is your <span id='colorchange'>Fortune</span>? 🥠 </b>"
+        S('colorchange').color = '#f2922c'
+        S('title').borderRadius = '10px'
+        S('title').background = '#fccf88'
+        S('title').padding = '17px'
 
-        handle = setInterval("showtime(O('time'))", 1000)
-        
-        function showtime(objectT)
-        {
-          var date = new Date()
-          objectT.innerHTML = date.toTimeString().substr(0,8)
-        }
-        setTimeout("clearInterval(handle)", 10000)
+        S('container').border = 'dotted 5px orange'
+        S('container').borderRadius = '15px'
+        S('container').background = '#faddaf'
+        S('container').fontSize = '15pt'
+        S('container').padding = '20px'
 
-
-        O('obj').onmouseover= function() {
-          this.src='../images/2021-08-20chongyunt.png'
-        }
-        O('obj').onmouseout= function() {
-          this.src='../images/2021-10-21gorou.png'
-        }
       </script>
         
 
-      <p> Pick a number:  <input type="number" id="pickNumber" value="0" max="5"></p>
+      <p> Pick a number:  <input type="number" id="pickNumber" value="0" max="10"></p>
+      <p> Enter your birth year: <input type="number" id="birthYear" value="2000" min="1912" max="2022"></p>
       <p> Enter your name: <input type="text" id="userName"></p>
       <p><button onclick="getFortune()"> Get My Fortune!</button></p>
       <p id="fortune"></p>
+      
+      <img id='image' src='closedfortune.png'>
     </section>
-
-    </main>
 
     <script src="script.js"></script>
 
