@@ -23,25 +23,27 @@
     </div>
     
     <div class="row">
-        <div class="column">
+        <div class="column user">
             Player
             Level 
             <span id="level" value="1" min="1" max="5">1</span>
             <div id="experience" value="0" min="0" max="3"></div>
             <p id="status"></p>
 
-            <p><button onclick="changePokemon()"> Run Away</button>
-            <button onclick="attack()"> Attack</button></p>
+            <div class="bottom">
+                <p><button class="btnscale run" onclick="changePokemon()"> Run Away</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btnscale atk" onclick="attack()"> Attack</button></p>
+            </div>
+            
         </div>
-        <div class="column">
+        <div class="column whosthatpokemon">
             <div changePokemon()></div>
             <div id="pokemonName"></div>
             <div id="fail"></div>
 
             <div class="container">
-                <div class="hpbar" id="hpbar">
-                    <div id="health">3000/3000</div>
-                </div>
+                <div class="hpbar" id="health">3000/3000</div>
                 <div id="dmgbar">0/3000</div>
             </div>
 

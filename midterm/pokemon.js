@@ -1,9 +1,10 @@
 function changePokemon() {
     //let pokemonID = $("id").random()
-    $.getJSON('https://pokeapi.co/api/v2/pokemon/35/',
+    let pokemonID = ['https://pokeapi.co/api/v2/pokemon/1/', 'https://pokeapi.co/api/v2/pokemon/2/','https://pokeapi.co/api/v2/pokemon/3/', 'https://pokeapi.co/api/v2/pokemon/4/', 'https://pokeapi.co/api/v2/pokemon/5/', 'https://pokeapi.co/api/v2/pokemon/6/', 'https://pokeapi.co/api/v2/pokemon/7/', 'https://pokeapi.co/api/v2/pokemon/8/', 'https://pokeapi.co/api/v2/pokemon/9/', 'https://pokeapi.co/api/v2/pokemon/10/', 'https://pokeapi.co/api/v2/pokemon/11/', 'https://pokeapi.co/api/v2/pokemon/12/', 'https://pokeapi.co/api/v2/pokemon/13/', 'https://pokeapi.co/api/v2/pokemon/14/', 'https://pokeapi.co/api/v2/pokemon/15/']
+    $.getJSON(getRandomItem(pokemonID),
     function(data) {
         console.log('data: ', data)
-        $('#pokemonName').text(data.pokemonID)
+        $('#pokemonName').text(data.pokename)
     }).fail(function() {
         $('#fail').text("There are no more Pokémon.")
         console.log("No more Pokémon")
@@ -11,9 +12,9 @@ function changePokemon() {
 }
 
 function attack() {
-    S('hpbar').width = '100%'
-    let hp = S('hpbar') // get the element
-    let h = parseInt(hp.value) //get its value and convert it to a number
+    S('health').width = '100%'
+    let hp = S('health') // get the element
+    //let h = parseInt(hp.value) //get its value and convert it to a number
     let numlv = O('level')
     let lv = parseInt(numlv.value)
     let numexp = O('experience')
@@ -21,16 +22,16 @@ function attack() {
     let statusString = ''
     let status = O('status')
 
-    if (h == 3000) {
-        S('hpbar').width = '66%'
+    if (hp == 3000) {
+        S('health').width = '66%'
         O('health').innerHTML = "2000/3000"
     }
-    else if (h == 2000) {
-        S('hpbar').width = '33%'
+    else if (hp == 2000) {
+        S('health').width = '33%'
         O('health').innerHTML = "1000/3000"
     }
-    else if (h == 1000) {
-        S('hpbar').width = '0'
+    else if (hp == 1000) {
+        S('health').width = '0'
         if (lv == 1 && lv <= 4) {
             if (exp == 0 && exp <= 2) {
                 exp += 1
