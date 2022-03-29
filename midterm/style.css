@@ -1,0 +1,63 @@
+/**
+Inspo:
+- https://www.w3schools.com/howto/howto_css_two_columns.asp
+- https://www.google.com/search?q=pokemon+field+background&tbm=isch&chips=q:pokemon+field+background,g_1:grassland:AFDKyOgSBTs%3D&rlz=1C1CHBF_enUS878US878&hl=en&sa=X&ved=2ahUKEwjswOOdlev2AhXygnIEHYxICMgQ4lYoAHoECAEQHg&biw=1499&bih=686#imgrc=OwUS6MjKUACwJM
+**/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Georgia, Verdana, Times, serif;
+    margin: 0;
+    padding: 15px;
+    color: #384652;
+    font-size: 13pt;
+    background-image: url("images/field.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.synopsis {
+    margin: 150px;
+    padding: 20px;
+    text-align: center;
+    font-size: 15pt;
+    color: #273541;
+    border-radius: 8px;
+    border-style: solid;
+    background: rgba(199, 216, 231, 0.8); /*opacity = 0.8*/
+}
+
+.column {
+    float: left;
+    width: 50%;
+    height: 600px;
+    border-style: solid;
+    padding: 20px;
+    font-size: 20pt;
+    background-color: #fffafa;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+button {
+    font-size: 15pt;
+    width: 150px;
+    padding: 10px 5px;
+    background: #ffe1e1;
+    border-style: solid;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 0 7px 0 #ed7777;
+    transition: all .1s linear;
+    cursor: pointer;
+  }
+  button:active {
+    box-shadow: 0 5px 0 #ed7777;
+    transform: translateY(3px);
+  }
