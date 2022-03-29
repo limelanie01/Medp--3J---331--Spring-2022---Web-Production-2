@@ -38,17 +38,18 @@
             <div id="pokemonName"></div>
             <div id="fail"></div>
 
-            <div id="hpbar">
-                <div id="health" value="3000" min="0" max="3000">3000/3000</div>
+            <div class="container">
+                <div class="hpbar" id="hpbar">
+                    <div id="health">3000/3000</div>
+                </div>
+                <div id="dmgbar">0/3000</div>
             </div>
+
             <script>
-                S('hpbar').padding = '12px 16px'
-                S('hpbar').borderStyle = 'solid'
-                S('hpbar').borderRadius = '7px'
-                S('hpbar').backgroundColor = '#82b862'
-                S('hpbar').size = '13pt'
-                S('hpbar').width = '100%'
-                S('hpbar').float = 'right'
+                S('dmgbar').width = '100%'
+                S('dmgbar').padding = '15px 16px'
+                S('dmgbar').backgroundColor = '#ed7777'
+                S('dmgbar').borderRadius = '7px'
             </script>
         </div>
         

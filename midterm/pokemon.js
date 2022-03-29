@@ -11,8 +11,8 @@ function changePokemon() {
 }
 
 function attack() {
-    O('health').innerText = "3000/3000"
-    let hp = O('health') // get the element
+    S('hpbar').width = '100%'
+    let hp = S('hpbar') // get the element
     let h = parseInt(hp.value) //get its value and convert it to a number
     let numlv = O('level')
     let lv = parseInt(numlv.value)
@@ -22,13 +22,15 @@ function attack() {
     let status = O('status')
 
     if (h == 3000) {
-        O('health').innerText = "2000/3000"
+        S('hpbar').width = '66%'
+        O('health').innerHTML = "2000/3000"
     }
     else if (h == 2000) {
-        O('health').innerText = "1000/3000"
+        S('hpbar').width = '33%'
+        O('health').innerHTML = "1000/3000"
     }
     else if (h == 1000) {
-        O('health').innerText = "0/3000"
+        S('hpbar').width = '0'
         if (lv == 1 && lv <= 4) {
             if (exp == 0 && exp <= 2) {
                 exp += 1
