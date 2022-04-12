@@ -1,4 +1,28 @@
-function changePokemon() {
+$(function() {
+    random = Math.floor(Math.random() * (200)) + 1
+    let ID = $(random).val()
+    $.getJSON('https://pokeapi.co/api/v2/pokemon/${ID}/', function(data01){
+        console.log(data01);
+        const pokemonE1 = document.createElement('div');
+        const name = data01.name[0].toUpperCase() + data01.name.slice(1);
+        pokemonE1.style.borderRadius = "20px";
+
+        const pokeInnerHTML = '
+        <div class="char-search">
+        <br>
+        <h2 class="name">${name}</h2>
+        <img src=${data01.sprites.front_default} alt=""/>
+        </div>
+        ';
+        pokemonE1.innerHTML = pokeInnerHTML;
+        char_search.appendChild(pokemonE1);
+    }).fail(function() {
+        $('#fail').text("You have not encountered any Pokémon")
+        console.log("no Pokémon are nearby")
+    })
+})
+
+/* function changePokemon() {
     //let pokemonID = $("id").random()
     let pokemonID = ['https://pokeapi.co/api/v2/pokemon/1/', 'https://pokeapi.co/api/v2/pokemon/2/','https://pokeapi.co/api/v2/pokemon/3/', 'https://pokeapi.co/api/v2/pokemon/4/', 'https://pokeapi.co/api/v2/pokemon/5/', 'https://pokeapi.co/api/v2/pokemon/6/', 'https://pokeapi.co/api/v2/pokemon/7/', 'https://pokeapi.co/api/v2/pokemon/8/', 'https://pokeapi.co/api/v2/pokemon/9/', 'https://pokeapi.co/api/v2/pokemon/10/', 'https://pokeapi.co/api/v2/pokemon/11/', 'https://pokeapi.co/api/v2/pokemon/12/', 'https://pokeapi.co/api/v2/pokemon/13/', 'https://pokeapi.co/api/v2/pokemon/14/', 'https://pokeapi.co/api/v2/pokemon/15/']
     $.getJSON(getRandomItem(pokemonID),
@@ -10,7 +34,7 @@ function changePokemon() {
         console.log("No more Pokémon")
     })
 }
-
+ */
 function attack() {
     S('health').width = '100%'
     let hp = S('health') // get the element

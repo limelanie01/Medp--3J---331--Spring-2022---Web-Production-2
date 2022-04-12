@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 9</title>
+</head>
+<body>
+    <h1>Favorite Anime</h1>
+    <form action='connect.php' method="post">
+        <label for="Name">Name:</label>
+        <input type='text' name="name" id="name" required>
+        <br><br>
+
+        <label for="Title">Anime Title:</label>
+        <input type='text' name="title" id="title" required>
+        <br><br>
+
+        <label for="Season">Season #:</label>
+        <input type='text' name="season" id="season" required>
+        <br><br>
+
+        <label for="Genre">Favorite Genre:</label>
+        <br>
+        <!-- https://www.phptutorial.net/php-tutorial/php-radio-button/ 
+        https://www.w3schools.com/tags/att_input_type_radio.asp -->
+        <input type='radio' name="genre" id="action" value="action" required>
+        <label for="action">Action</label>
+        <br>
+        <input type='radio' name="genre" id="adventure" value="adventure" required>
+        <label for="adventure">Adventure</label>
+        <br>
+        <input type='radio' name="genre" id="comedy" value="comedy" required>
+        <label for="comedy">Comedy</label>
+        <br>
+        <input type='radio' name="genre" id="fantasy" value="fantasy" required>
+        <label for="fantasy">Fantasy</label>
+        <br>
+        <input type='radio' name="genre" id="horror" value="horror" required>
+        <label for="horror">Horror</label>
+        <br>
+        <input type='radio' name="genre" id="isekai" value="isekai" required>
+        <label for="isekai">Isekai</label>
+        <br>
+        <input type='radio' name="genre" id="josei" value="josei" required>
+        <label for="josei">Josei</label>
+        <br>
+        <input type='radio' name="genre" id="mystery" value="mystery" required>
+        <label for="mystery">Mystery</label>
+        <br>
+        <input type='radio' name="genre" id="romance" value="romance" required>
+        <label for="romance">Romance</label>
+        <br>
+        <input type='radio' name="genre" id="seinen" value="seinen" required>
+        <label for="seinen">Seinen</label>
+        <br>
+        <input type='radio' name="genre" id="shoujo" value="shoujo" required>
+        <label for="shoujo">Shoujo</label>
+        <br>
+        <input type='radio' name="genre" id="shounen" value="shounen" required>
+        <label for="shounen">Shounen</label>
+        <br>
+        <input type='radio' name="genre" id="slice-of-life" value="slice-of-life" required>
+        <label for="slice-of-Life">Slice of Life</label>
+        <br>
+        <input type='radio' name="genre" id="thriller" value="thriller" required>
+        <label for="thriller">Thriller</label>
+        <br>
+        <input type='radio' name="genre" value="other" required>
+        <label for="other">Other</label>
+        <input type='text' name="genre" id="other" required>
+        <br><br><br>
+
+        <input type='submit' name='submit' id="submit">
+    </form>
+</body>
+</html>
